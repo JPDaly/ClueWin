@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetupMeActivity">
+
+    <TextView
+        android:id="@+id/me_tv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/me_text"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <LinearLayout
+        android:id="@+id/order_ll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/me_tv">
+
+        <TextView
+            android:id="@+id/order_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/order_text"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+        <EditText
+            android:id="@+id/order_et"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:inputType="number"
+            app:layout_constraintRight_toRightOf = "parent"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/cards_lv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:choiceMode="multipleChoice"
+        app:layout_constraintBottom_toTopOf="@id/next_butt"
+        app:layout_constraintTop_toBottomOf="@id/order_ll">
+    </ListView>
+
+
+    <Button
+        android:id="@+id/next_butt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight = "1"
+        android:text="@string/next_butt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+
+</android.support.constraint.ConstraintLayout>
