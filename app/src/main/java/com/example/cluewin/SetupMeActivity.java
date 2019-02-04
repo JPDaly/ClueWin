@@ -38,7 +38,7 @@ public class SetupMeActivity extends AppCompatActivity {
        // card_et.setHint(String.format(Locale.getDefault(), "1-%d", n_players));
         cards = new ArrayList<>();
         card_names = getResources().getStringArray(R.array.classic_cards);
-//        cards_lv = findViewById(R.id.cards_lv);
+        cards_lv = findViewById(R.id.cards_lv);
 //        this.changeListView(cards_lv, 0);
 //
 //        cards_lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -48,18 +48,23 @@ public class SetupMeActivity extends AppCompatActivity {
 //            }
 //        });
 
-
-
-        for(int i=0; i<Game.TOTAL_CARDS; i++) {
-            if(i < 6) {
+        cards.add(new Card(Card.PERSON, card_names[0], -1));
+        for(int i=1; i<card_names.length; i++) {
+            if(i <= 6) {
                 cards.add(new Card(Card.PERSON, card_names[i], i));
-            } else if (i < 12) {
+            } else if(i==7) {
+                cards.add(new Card(Card.WEAPON, card_names[i], -1));
+            } else if (i <= 13) {
                 cards.add(new Card(Card.WEAPON, card_names[i], i));
+            } else if(i == 14) {
+                cards.add(new Card(Card.PERSON, card_names[i], -1));
             } else {
                 cards.add(new Card(Card.ROOM, card_names[i], i));
             }
         }
 
+        CardListAdapter cardAdapter = new CardListAdapter(this, R.layout.card_adapter, cards);
+        cards_lv.setAdapter(cardAdapter);
     }
 //
 //    private void changeListView(ListView cards_lv, int theme) {
