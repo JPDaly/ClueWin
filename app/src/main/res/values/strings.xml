@@ -11,6 +11,7 @@
     <string name="order_text">Order no.</string>
 
     <string-array name="classic_cards">
+        <item>People</item>
         <item>Colonel Mustard</item>
         <item>Miss Scarlet</item>
         <item>Mr. Green</item>
@@ -18,6 +19,7 @@
         <item>Mrs. White</item>
         <item>Professor Plum</item>
 
+        <item>Weapons</item>
         <item>Candlestick</item>
         <item>Wrench</item>
         <item>Rope</item>
@@ -25,6 +27,7 @@
         <item>Knife</item>
         <item>Lead Pipe</item>
 
+        <item>Rooms</item>
         <item>Billiard Room</item>
         <item>Study</item>
         <item>Hall</item>
