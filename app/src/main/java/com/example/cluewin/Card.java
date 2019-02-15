@@ -9,11 +9,13 @@ public class Card {
     private int type;
     private String name;
     private int id;
+    public boolean selected;
 
     public Card(int type, String name, int id) {
         this.type = type;
         this.name = name;
         this.id = id;
+        this.selected = false;
     }
 
     public void setType(int type) {
