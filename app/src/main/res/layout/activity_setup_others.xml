@@ -11,7 +11,9 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         app:layout_constraintVertical_weight="1"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
     <EditText
         android:id="@+id/name_et"
@@ -46,13 +48,35 @@
         app:layout_constraintTop_toBottomOf="@id/play_cards_et" />
 
 
-    <Button
-        android:id="@+id/play_next_butt"
+
+    <LinearLayout
+        android:id="@+id/play_butts_ll"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight = "1"
-        android:text="@string/next_butt"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintVertical_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/play_order_et">
+
+        <Button
+            android:id="@+id/play_back_butt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_weight = "1"
+            android:text="@string/back_butt"
+            app:layout_constraintLeft_toLeftOf ="parent" />
+
+        <Button
+            android:id="@+id/play_next_butt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight = "3"
+            android:text="@string/next_butt"
+            app:layout_constraintRight_toRightOf ="parent" />
+
+    </LinearLayout>
+
+
 
 
 </android.support.constraint.ConstraintLayout>

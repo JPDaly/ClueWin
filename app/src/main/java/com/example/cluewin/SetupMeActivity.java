@@ -101,7 +101,7 @@ public class SetupMeActivity extends AppCompatActivity {
 
                 int order_num = Integer.parseInt(order_et.getText().toString());
 
-                me = new Player(order_num, "Me", selected);
+                me = new Player(order_num, "Me", selected.size(), selected);
 
                 Intent intent = new Intent(SetupMeActivity.this, SetupOthersActivity.class);
                 intent.putExtra("PlayerMe", me);
